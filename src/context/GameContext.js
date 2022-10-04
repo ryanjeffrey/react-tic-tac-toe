@@ -9,7 +9,7 @@ export function GameContextProvider({ children }) {
 
   const [board, setBoard] = useState(initialState);
   const [currentPlayer, setCurrentPlayer] = useState('X');
-  const [gameMessage, setGameMessage] = useState('Your Turn X');
+  const [gameMessage, setGameMessage] = useState('Your Turn, X');
   const [active, setActive] = useState(true);
 
   const handleBoxClick = (num) => {
@@ -20,7 +20,7 @@ export function GameContextProvider({ children }) {
       prev.map((box) => (box.position === num ? { position: num, content: currentPlayer } : box))
     );
     setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
-    setGameMessage(currentPlayer === 'X' ? 'Your Turn O' : 'Your Turn X');
+    setGameMessage(currentPlayer === 'X' ? 'Your Turn, O' : 'Your Turn, X');
   };
 
   return (
