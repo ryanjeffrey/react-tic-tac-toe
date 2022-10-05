@@ -95,8 +95,15 @@ export function GameContextProvider({ children }) {
 
   checkGameStatus();
 
+  const resetGame = () => {
+    setBoard(initialState);
+    setActive(true);
+    setGameMessage('Your Turn, X');
+    setCurrentPlayer('X');
+  };
+
   return (
-    <GameContext.Provider value={{ board, currentPlayer, gameMessage, active, handleBoxClick }}>
+    <GameContext.Provider value={{ board, currentPlayer, gameMessage, active, handleBoxClick, resetGame }}>
       {children}
     </GameContext.Provider>
   );

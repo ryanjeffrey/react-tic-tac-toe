@@ -4,3 +4,18 @@
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
+
+button {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px auto;
+    padding: 8px;
+    background-color: rgb(152, 186, 93);
+    color: white;
+    border-radius: 8px;
+    border: 0.5px solid black;
+    transition: color .6s ease;
+}
+button:hover {
+    color: black;
+}
